@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Quadrinho {
     constructor() {
-        this.hqs = ["Homem-Aranha"];
+        this.hqs = [];
     }
 
 }

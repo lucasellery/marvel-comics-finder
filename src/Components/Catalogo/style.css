@@ -1,3 +1,35 @@
 .li {
-    list-style-type: none;
+  list-style-type: none;
+}
+
+.button-mostrar {
+  margin-top: 10px;
+  align-content: center;
+  justify-self: center;
+  width: 50%;
+  height: 30px;
+  background: red;
+  color: black;
+  border: none;
+}
+
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 250px;
+  height: 306px;
+  border-bottom-style: solid;
+  border-radius: 1px;
+}
+
+.name {
+  width: 250px;
+  margin: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  text-align: center;
 }

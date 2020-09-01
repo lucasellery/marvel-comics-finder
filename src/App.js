@@ -8,7 +8,6 @@ import Quadrinho from "./dados/Quadrinho";
 // import Catalogo from "./Components/Catalogo";
 
 class App extends Component {
-
   constructor() {
     super();
     this.quadrinhos = new Quadrinho();
@@ -21,11 +20,7 @@ class App extends Component {
 
         <Input />
 
-        <Catalogo 
-          hqs={this.quadrinhos.hqs}
-        />
-
-        {/* <Link to="/sobre"> Ir para página sobre</Link> */}
+        <Catalogo />
       </div>
     );
   }
