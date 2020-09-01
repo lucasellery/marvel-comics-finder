@@ -2,10 +2,19 @@
   list-style-type: none;
 }
 
+.box-button {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+}
+
 .button-mostrar {
   margin-top: 10px;
-  align-content: center;
-  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 30px;
   background: red;

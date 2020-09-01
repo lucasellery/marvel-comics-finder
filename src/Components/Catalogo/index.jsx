@@ -47,9 +47,14 @@ class Catalogo extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.apiQuadrinhos.bind(this)} className="button-mostrar">
-          Mostrar HQs
-        </button>
+        <section className="box-button">
+          <button
+            onClick={this.apiQuadrinhos.bind(this)}
+            className="button-mostrar"
+          >
+            Mostrar HQs
+          </button>
+        </section>
         <div className="comics"></div>
       </div>
     );
