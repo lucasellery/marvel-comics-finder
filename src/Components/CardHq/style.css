@@ -1,0 +1,11 @@
+.card-hq {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: rgb(36, 36, 36);
+  border-radius: 3px;
+  flex-wrap: wrap;
+  padding: 16px;
+  margin: 15px 20px;
+}
