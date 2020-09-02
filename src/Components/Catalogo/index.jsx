@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import "./style.css";
 
 class Catalogo extends Component {
+  constructor(props) {
+    super(props);
+    this.descricao = "";
+  }
+
   apiQuadrinhos() {
     const timeStamp = "1598978646";
     const apiKey = "f4708d23f3840536d3456740ea5f32f8";
     const md5 = "328f2bd03eabe603b02ae1085b748ba1";
 
     fetch(
-      `https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=20`
+      `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=25`
     )
       .then((response) => {
         return response.json();
@@ -21,6 +26,7 @@ class Catalogo extends Component {
           const srcImage =
             element.thumbnail.path + "." + element.thumbnail.extension;
           const nameComic = element.name;
+          // console.log(nameComic);
 
           this.createDivComic(srcImage, nameComic, divComic);
         });
@@ -42,6 +48,32 @@ class Catalogo extends Component {
     divToAppend.appendChild(divPai);
 
     divPai.classList.add("name");
+  }
+
+  mostraDetalhes() {
+    const timeStamp = "1598978646";
+    const apiKey = "f4708d23f3840536d3456740ea5f32f8";
+    const md5 = "328f2bd03eabe603b02ae1085b748ba1";
+
+    fetch(
+      `https://gateway.marvel.com:443/v1/public/comics?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=25`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsonParsed) => {
+        console.log(jsonParsed);
+        const divComic = document.querySelector(".comics");
+
+        jsonParsed.data.results.forEach((element) => {
+          const srcImage =
+            element.thumbnail.path + "." + element.thumbnail.extension;
+          const nameComic = element.name;
+          // console.log(nameComic);
+
+          this.createDivComic(srcImage, nameComic, divComic);
+        });
+      });
   }
 
   render() {
